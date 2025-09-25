@@ -19,15 +19,12 @@ The dataset contains information about used cars, including:
 - Fuel type  
 - Seller type  
 - Transmission  
-- Ownership
+- Ownership  
+
 ---
+
 ## Installation & Usage
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/car-price-prediction.git
    cd car-price-prediction
----
-
-## Live Demo  
-Try the app online:  
-[Car Price Prediction App](https://car-price-prediction-mtyrc7ra7ybtmmu8bmdaup.streamlit.app/)
