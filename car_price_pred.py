@@ -5,6 +5,8 @@ import gzip
 
 with gzip.open("Cars_prediction.sav.gz", "rb") as f:
     model = pickle.load(f)
+
+data=pickle.load(open(r'C:\Users\AD\Cars_prediction.sav','rb'))
 st.title('Car Price_prediction')
 st.sidebar.header('Feature Selecting')
 st.sidebar.info('Easy Application For Predicting Cars_price')
@@ -156,5 +158,4 @@ if X_expected is not None:
 p = st.sidebar.button('predictPrice')
 if p:
     pre = data.predict(df_enc)
-
     st.sidebar.write(f"price is : {pre[0]:,.0f} $")
