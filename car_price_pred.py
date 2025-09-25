@@ -154,8 +154,9 @@ if X_expected is not None:
 
 p = st.sidebar.button('predictPrice')
 if p:
-    pre = data.predict(df_enc)
+    pre = model.predict(df_enc)
 
     st.sidebar.write(f"price is : {pre[0]:,.0f} $")
+
 
 
