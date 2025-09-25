@@ -1,7 +1,8 @@
 import streamlit as st
-import pandas as pd 
+import pandas as pd
 import pickle
-# 
+
+# استدعاء الملف من نفس مجلد المشروع
 model = pickle.load(open('Cars_prediction.sav', 'rb'))
 # 
 st.title('Car Price_prediction')
@@ -157,3 +158,4 @@ if p:
     pre = data.predict(df_enc)
 
     st.sidebar.write(f"price is : {pre[0]:,.0f} $")
+
