@@ -144,7 +144,7 @@ df = pd.DataFrame({
 }, index=[0])
 
 # --- حوّل لـ One-Hot وزبط الأعمدة لتطابق تدريب الموديل ---
-X_expected = getattr(data, "feature_names_in_", None)
+X_expected = getattr(model, "feature_names_in_", None)
 
 df_enc = pd.get_dummies(df)
 
@@ -157,4 +157,5 @@ if p:
     pre = data.predict(df_enc)
 
     st.sidebar.write(f"price is : {pre[0]:,.0f} $")
+
 
