@@ -2,13 +2,12 @@ import streamlit as st
 import pandas as pd 
 import pickle
 import gzip
-
 with gzip.open("Cars_prediction.sav.gz", "rb") as f:
     model = pickle.load(f)
 st.title('Car Price_prediction')
 st.sidebar.header('Feature Selecting')
 st.sidebar.info('Easy Application For Predicting Cars_price')
-st.image("car.jpg")
+st.image("cuadros porsche cuarto remodelacion.jpeg")
 # --------------------------------------------------------------------
 m1 = ['LEXUS','CHEVROLET','HONDA','FORD','HYUNDAI','TOYOTA','MERCEDES-BENZ',
       'OPEL','PORSCHE','BMW','JEEP','VOLKSWAGEN','AUDI','RENAULT','NISSAN',
@@ -158,3 +157,4 @@ if p:
     pre = data.predict(df_enc)
 
     st.sidebar.write(f"price is : {pre[0]:,.0f} $")
+
